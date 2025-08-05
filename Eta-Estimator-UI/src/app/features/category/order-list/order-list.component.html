@@ -1,0 +1,39 @@
+<div class="order-container">
+<table>
+<tr><h4>Order List</h4></tr>
+<tr>
+  <ng-container *ngIf="orders.length > 0; else noOrders">
+    <table>      
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>&nbsp;&nbsp;&nbsp;</th>
+          <th>Region</th>
+          <th>&nbsp;&nbsp;&nbsp;</th>
+          <th>Products & ETAs</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <th>&nbsp;&nbsp;&nbsp;</th>
+          <td>{{ order.region }}</td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <ul style="margin: 0; padding-left: 20px;">
+              <li *ngFor="let item of order.productEtas">
+                {{ item.name }} expected to arrive in {{ item.estimatedDays }} day(s).
+              </li>
+            </ul>
+          </td>          
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  </tr>
+  </table> 
+
+  <ng-template #noOrders>
+    <p>No orders available.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse; /* Ensures borders are combined between cells */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+tr {
+  border-bottom: 2px solid #ddd; /* Horizontal line between rows */
+}
+
+tr:last-child {
+  border-bottom: none; /* Remove bottom border from last row */
+}

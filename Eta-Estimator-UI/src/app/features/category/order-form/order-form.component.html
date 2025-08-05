@@ -1,0 +1,40 @@
+<table>
+  <tr><h4>Submit Order</h4></tr>
+<tr>
+  <td><label>Region:</label></td>
+  <td><input [(ngModel)]="region" /></td>
+</tr>
+
+<tr>
+  <td><label>Product IDs (comma-separated):</label></td>
+  <td><input [(ngModel)]="productIdsText" /></td>
+</tr>
+<tr>
+<button (click)="submitOrder()">Submit</button>
+</tr>
+</table>
+<!-- Success message with table -->
+<div *ngIf="submittedOrder">
+  <h3>Order Submitted</h3>
+  <p><strong>Order ID:</strong> {{ submittedOrder.orderId }}</p>
+
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Estimated Days</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of submittedOrder.productEtas">
+        <td>{{ item.name }}</td>
+        <td>{{ item.estimatedDays }}</td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Error message -->
+<div *ngIf="error" style="color:red">
+  {{ error }}
+</div>
