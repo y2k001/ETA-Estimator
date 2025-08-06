@@ -31,8 +31,8 @@ then >ng serve
 # ETA-Estimator
 Delivery ETA Estimator
 The application has been developed using following data as reference and assumptions and works just to show delivery of orders.Data to be entered is case sensitive currently.<br>
-Products and region delay data are mocked in DataStore.cs
-Submitted orders are stored in an in-memory ConcurrentDictionary<br>
+<li>Products and region delay data are mocked in DataStore.cs
+<li>Submitted orders are stored in an in-memory ConcurrentDictionary<br>
 Delivery is estimated based on region and stock available
 Estimated delivery days based on:
 
