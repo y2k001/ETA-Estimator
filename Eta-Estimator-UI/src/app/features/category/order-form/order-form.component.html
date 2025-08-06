@@ -10,7 +10,13 @@
   <td><input [(ngModel)]="productIdsText" /></td>
 </tr>
 <tr>
-<button (click)="submitOrder()">Submit</button>
+  <td>
+    <button (click)="resetForm()">Refresh</button>
+  </td>
+ <td>
+    <button (click)="submitOrder()">Submit</button>
+  </td>
+    
 </tr>
 </table>
 <!-- Success message with table -->

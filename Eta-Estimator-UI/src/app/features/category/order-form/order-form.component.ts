@@ -37,4 +37,12 @@ export class OrderFormComponent {
       }
     });
   }
+
+   resetForm() {
+    this.region = '';  // Clear the region input
+    this.productIdsText = '';  // Clear the product IDs input
+    this.submittedOrder = undefined;  // Reset the submitted order
+    this.error = undefined;  // Optionally reset any error messages
+    window.location.reload();  // Reload the page (optional)
+  }
 }
