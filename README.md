@@ -23,7 +23,7 @@ West-> 7<br>
 
 
 On adding data in the text fields and submitting, we get as follows<br>
-![alt text](image-1.png)
+![alt text](image-3.png)
 On refreshing the page we get page as 
-![alt text](image-2.png)
+![alt text](image-4.png)
 Similarly, we can add data based on data above. 
